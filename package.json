@@ -1,0 +1,17 @@
+{
+  "name": "imagecompress",
+  "version": "1.0.0",
+  "description": "Compresses and crops images",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Siviwe Xakaza",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "kraken": "^0.4.0"
+  }
+}
