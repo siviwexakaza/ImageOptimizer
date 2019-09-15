@@ -40,6 +40,28 @@ app.post('/upload',(req,res)=>{
 
 });
 
+app.post('/image',(req,res)=>{
+    opts={
+        file:req.body.Image, //<-- req.boy is empty when endpoint is called from a webapp with JQuery but is popolated when called on Postman
+        wait:true,
+        lossy:true,
+        quality:60
+    };
+
+    //res.json(opts);
+
+    kraken.upload(opts,(err,data)=>{
+
+        if(err){
+            res.json([{"Status":"Failed"},{"Message":"Forbidden file format"}]);
+        }else{
+            res.json(data);
+        }
+
+    });
+
+});
+
 app.listen(port,()=>{
     console.log('server running on port',port);
 });
